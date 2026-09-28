@@ -1,0 +1,317 @@
+/* =========================
+   GENERAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(239, 68, 68, 0.12),
+            transparent 35%
+        ),
+        #fff;
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #fee2e2;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.order-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #dc2626;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card .icon {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+    color: #dc2626;
+
+    font-size: 25px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   STEPS
+========================= */
+
+.step {
+    padding: 30px;
+    border: 1px solid #374151;
+    border-radius: 20px;
+}
+
+.step span {
+    color: #f87171;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.step h3 {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.step p {
+    color: #9ca3af;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonial {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+}
+
+.stars {
+    color: #f59e0b;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    color: #4b5563;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   OFFER
+========================= */
+
+.offer-section {
+    background:
+        linear-gradient(
+            135deg,
+            #991b1b,
+            #dc2626,
+            #7f1d1d
+        );
+}
+
+.timer-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    min-width: 80px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-box span {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.timer-box small {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   PRICE CARDS
+========================= */
+
+.price-card {
+    position: relative;
+
+    background: white;
+    color: #111827;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.price-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.price {
+    font-size: 38px;
+    font-weight: 900;
+
+    margin: 15px 0;
+}
+
+.popular {
+    transform: scale(1.04);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #facc15;
+    color: #111827;
+
+    padding: 6px 18px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #dc2626;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+
+}
